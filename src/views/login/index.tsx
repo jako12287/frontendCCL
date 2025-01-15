@@ -4,6 +4,10 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import { PropsForm } from "../../types";
+// import { useDispatch } from "react-redux";
+// import { login } from "../../redux/slices/authReducer";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const schema = yup.object().shape({
   user: yup
@@ -13,6 +17,25 @@ const schema = yup.object().shape({
   password: yup.string().required("La contraseña es obligatoria"),
 });
 const Login = () => {
+  // const dispatch = useDispatch();
+  const navigation = useNavigate();
+  useEffect(() => {
+    const setUser = async () => {
+      await localStorage.setItem("@TOKEN", "kjhkjhkhjkhkj");
+      await localStorage.setItem("@USER", "{}");
+    };
+
+    setUser();
+  }, []);
+  useEffect(() => {
+    const user = localStorage.getItem("@USER");
+    const tokent = localStorage.getItem("@TOKEN");
+    if (user && tokent) {
+      navigation("/");
+    }
+    /* eslint-disable-next-line react-hooks/exhaustive-deps */
+  }, []);
+
   const {
     handleSubmit,
     control,
@@ -22,6 +45,11 @@ const Login = () => {
 
   const onSubmit: SubmitHandler<PropsForm> = (data) => {
     console.log(data);
+    // const dataSend = {
+    //   user: data.user.toLowerCase(),
+    //   password: data.password,
+    // };
+    // dispatch(login(dataSend) as never);
     // reset();
   };
 

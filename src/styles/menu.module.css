@@ -1,0 +1,33 @@
+.container {
+}
+
+.containerImage {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 70%;
+  height: auto;
+  object-fit: cover;
+}
+
+.menu li {
+  list-style: none;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  color: var(--gray-color);
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.menu a {
+  color: var(--gray-color);
+}
+
+.linkActive {
+  color: var(--secondary-color);
+}

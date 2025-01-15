@@ -5,6 +5,7 @@ import MovementRecord from "../views/movimentRecord";
 import Home from "../views/home";
 import NotFound from "../views/noFound";
 import ProtectedRoute from "./protectedRoute";
+import Layout from "../components/layout";
 
 const Router: RouteObject[] = [
   {
@@ -17,16 +18,42 @@ const Router: RouteObject[] = [
     path: "/",
     element: (
       <ProtectedRoute>
-        <Home />
+        <Layout>
+          <Home />
+        </Layout>
       </ProtectedRoute>
     ),
   },
   {
-    id: "record",
-    path: "/record",
+    id: "recordIn",
+    path: "/recordIn",
     element: (
       <ProtectedRoute>
-        <MovementRecord />
+        <Layout>
+          <MovementRecord />
+        </Layout>
+      </ProtectedRoute>
+    ),
+  },
+  {
+    id: "recordOut",
+    path: "/recordOut",
+    element: (
+      <ProtectedRoute>
+        <Layout>
+          <MovementRecord />
+        </Layout>
+      </ProtectedRoute>
+    ),
+  },
+  {
+    id: "inventory",
+    path: "/inventory",
+    element: (
+      <ProtectedRoute>
+        <Layout>
+          <MovementRecord />
+        </Layout>
       </ProtectedRoute>
     ),
   },

@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface ProtectedRouteProps {
   children: JSX.Element;
 }
@@ -21,4 +23,12 @@ export interface AuthState {
 export interface LoginResult {
   token: string;
   user: UserProps | null;
+}
+
+export interface PropsLayout {
+  children: ReactNode;
+}
+
+export interface PropsMenuResponsive {
+  setOpenModal: React.Dispatch<React.SetStateAction<boolean>>;
 }
