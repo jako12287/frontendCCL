@@ -50,11 +50,23 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .imageLogoResponsive {
   display: none;
+}
+
+.containerIpunt {
+  position: relative;
+  width: 100%;
+}
+
+.textError {
+  color: var(--error-color);
+  font-size: 13px;
+  position: absolute;
+  top: 100%;
 }
 
 @media (max-width: 816px) {
