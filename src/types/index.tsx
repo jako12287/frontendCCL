@@ -32,3 +32,10 @@ export interface PropsLayout {
 export interface PropsMenuResponsive {
   setOpenModal: React.Dispatch<React.SetStateAction<boolean>>;
 }
+
+export interface PropsFormAddProduct {
+  name: string;
+  description: string;
+  price: number;
+  quantity: number;
+}
