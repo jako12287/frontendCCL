@@ -39,3 +39,9 @@ export interface PropsFormAddProduct {
   price: number;
   quantity: number;
 }
+
+export interface PropsFormOutProduct {
+  product?: string;
+  reason: string;
+  quantity: number;
+}

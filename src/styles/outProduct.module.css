@@ -5,6 +5,7 @@
   align-items: center;
   gap: 3rem;
 }
+
 .formAdd {
   max-width: 500px;
   margin: 0 auto;
@@ -16,6 +17,12 @@
   gap: 2rem;
   background-color: var(--primary-color);
   width: 300px;
+}
+
+.label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 .containerIpunt {

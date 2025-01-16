@@ -2,6 +2,8 @@ import { createBrowserRouter, RouteObject } from "react-router-dom";
 
 import Login from "../views/login";
 import MovementRecord from "../views/movimentRecord";
+import OutProduct from "../views/outProduct";
+import Inventory from "../views/Inventory";
 import Home from "../views/home";
 import NotFound from "../views/noFound";
 import ProtectedRoute from "./protectedRoute";
@@ -41,7 +43,7 @@ const Router: RouteObject[] = [
     element: (
       <ProtectedRoute>
         <Layout>
-          <MovementRecord />
+          <OutProduct />
         </Layout>
       </ProtectedRoute>
     ),
@@ -52,7 +54,7 @@ const Router: RouteObject[] = [
     element: (
       <ProtectedRoute>
         <Layout>
-          <MovementRecord />
+          <Inventory />
         </Layout>
       </ProtectedRoute>
     ),
